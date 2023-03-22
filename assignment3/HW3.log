@@ -1,0 +1,75 @@
+### Problem 1 
+
+Call:
+lm(formula = data$price ~ data$sqrft + data$bdrms, data = data_1)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-127.627  -42.876   -7.051   32.589  229.003 
+
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)    
+(Intercept) -19.31500   31.04662  -0.622    0.536    
+data$sqrft    0.12844    0.01382   9.291 1.39e-14 ***
+data$bdrms   15.19819    9.48352   1.603    0.113    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 63.04 on 85 degrees of freedom
+Multiple R-squared:  0.6319,	Adjusted R-squared:  0.6233 
+F-statistic: 72.96 on 2 and 85 DF,  p-value: < 2.2e-16
+
+(a) price = -19.315 + 0.12844*sqrft + 15.19819bdrms 
+(b) if the house had 1 more room, holding square footage constant, the price of the house would on average increase by 
+$15,198 
+(c) the estimated increase in price = (0.128 * 140)+ (15.198 * 1) = 17.92 + 15.198 = 33.118 
+(d) the multiple R-squared is 0.6319, suggesting that 63.19% of variations are explained with the model 
+(e) = −19.315 + 0.128*2438 + 15198*4 = $353,541 
+(f) underpaid by 353541 - 300000 = $53,541 
+### Problem 2 
+
+Call:
+lm(formula = data_2$math4 ~ data_2$pctsgle, data = data_2)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-47.791  -8.310   1.600   8.092  50.317 
+
+Coefficients:
+               Estimate Std. Error t value Pr(>|t|)    
+(Intercept)    96.77043    1.59680   60.60   <2e-16 ***
+data_2$pctsgle -0.83288    0.07068  -11.78   <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 12.48 on 227 degrees of freedom
+Multiple R-squared:  0.3795,	Adjusted R-squared:  0.3768 
+F-statistic: 138.9 on 1 and 227 DF,  p-value: < 2.2e-16
+
+The percentage of children not in the married-couples families has a negative impact on percentage of satisfactory level of 4th grade math. It's estimated that one percentage increase in pctsgle will result in a -0.8328 percentage decrease in satisfactory level of 4th grade math, which is a small effect. 
+
+Call:
+lm(formula = data_2$math4 ~ data_2$pctsgle + data_2$lmedinc + 
+    data_2$free, data = data_2)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-34.919  -7.195   0.931   7.313  50.152 
+
+Coefficients:
+               Estimate Std. Error t value Pr(>|t|)    
+(Intercept)    51.72357   58.47814   0.884    0.377    
+data_2$pctsgle -0.19965    0.15872  -1.258    0.210    
+data_2$lmedinc  3.56010    5.04170   0.706    0.481    
+data_2$free    -0.39642    0.07035  -5.635  5.2e-08 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 11.7 on 225 degrees of freedom
+Multiple R-squared:  0.4598,	Adjusted R-squared:  0.4526 
+F-statistic: 63.85 on 3 and 225 DF,  p-value: < 2.2e-16
+
+(b) The coefficient of pctsgle has changed from -0.8328 to -0.1996. The coefficient still suggest that an increase in the percentage of children not in married couples, the percentage of satisfactory level of 4th grade math decrease, yet this negative relation is weaken. 
+[1] -0.7469705
+(c) The correlation is -0.74. It's quite reasonable since when the median income increase, people will be less able to get free lunch. 
+(d) No, high correlations between lmedinc and free will not make it more difficult to determine the causal effect of single parenthood on student's math performance. 

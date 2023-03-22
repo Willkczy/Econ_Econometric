@@ -1,0 +1,18 @@
+dcode           long    %12.0g                district code
+bcode           int     %8.0g                 building code
+math4           float   %9.0g                 % satisfactory, 4th grade math
+read4           float   %9.0g                 % satisfactory, 4th grade reading
+enroll          int     %8.0g                 school enrollment
+exppp           float   %9.0g                 expenditures per pupil, $
+free            float   %9.0g                 % eligible, free lunch
+reduced         float   %9.0g                 % eligible, reduced lunch
+lunch           float   %9.0g                 free + reduced
+medinc          long    %12.0g                zipcode median family, $ (1999)
+totchild        int     %8.0g                 # of children (in zipcode)
+married         int     %8.0g                 # of children in married-couple families
+single          int     %8.0g                 # of children not in married-couple families
+pctsgle         float   %9.0g                 % of children not in married-couple families
+zipcode         long    %12.0g                school zipcode
+lenroll         float   %9.0g                 log(enroll)
+lexppp          float   %9.0g                 log(exppp)
+lmedinc         float   %9.0g                 log(medinc)
