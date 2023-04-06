@@ -1,0 +1,25 @@
+variable name   type    format     label      variable label
+-------------------------------------------------------------------------------
+wage            float   %9.0g                 hourly wage, 1991
+abil            float   %9.0g                 abil. measure, not standardized
+educ            byte    %9.0g                 highest grade completed by 1991
+ne              byte    %9.0g                 =1 if in northeast, 1991
+nc              byte    %9.0g                 =1 if in nrthcntrl, 1991
+west            byte    %9.0g                 =1 if in west, 1991
+south           byte    %9.0g                 =1 if in south, 1991
+exper           byte    %9.0g                 potential experience
+motheduc        byte    %9.0g                 highest grade, mother
+fatheduc        byte    %9.0g                 highest grade, father
+brkhme14        byte    %9.0g                 =1 if broken home, age 14
+sibs            byte    %9.0g                 number of siblings
+urban           byte    %9.0g                 =1 if in urban area, 1991
+ne18            byte    %9.0g                 =1 if in NE, age 18
+nc18            byte    %9.0g                 =1 if in NC, age 18
+south18         byte    %9.0g                 =1 if in south, age 18
+west18          byte    %9.0g                 =1 if in west, age 18
+urban18         byte    %9.0g                 =1 if in urban area, age 18
+tuit17          float   %9.0g                 college tuition, age 17
+tuit18          float   %9.0g                 college tuition, age 18
+lwage           float   %9.0g                 log(wage)
+expersq         int     %9.0g                 exper^2
+ctuit           float   %9.0g                 tuit18 - tuit17
